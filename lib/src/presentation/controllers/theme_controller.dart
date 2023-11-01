@@ -1,13 +1,16 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
-@Injectable()
+@Singleton()
 class ThemeController with ChangeNotifier {
   ThemeMode _themeMode = ThemeMode.dark;
 
   ThemeMode get themeMode => _themeMode;
   set themeMode(ThemeMode value) {
     _themeMode = value;
+    log(_themeMode.toString());
     notifyListeners();
   }
 
@@ -15,7 +18,14 @@ class ThemeController with ChangeNotifier {
   void switchToLightMode() => themeMode = ThemeMode.light;
 
   void switchMode() {
-    if (themeMode == ThemeMode.dark) themeMode = ThemeMode.light;
-    if (themeMode == ThemeMode.light) themeMode = ThemeMode.dark;
+    if (themeMode == ThemeMode.dark) {
+      themeMode = ThemeMode.light;
+      return;
+    }
+
+    if (themeMode == ThemeMode.light) {
+      themeMode = ThemeMode.dark;
+      return;
+    }
   }
 }
