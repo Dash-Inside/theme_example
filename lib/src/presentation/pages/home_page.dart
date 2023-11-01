@@ -11,7 +11,6 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       body: Column(
-        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -21,8 +20,10 @@ class HomePage extends StatelessWidget {
             },
             child: const SizedBox(
               width: double.infinity,
-              child: Text(
-                'Switch to next mode',
+              child: Center(
+                child: Text(
+                  'Switch to next mode',
+                ),
               ),
             ),
           ),
@@ -32,8 +33,10 @@ class HomePage extends StatelessWidget {
             },
             child: const SizedBox(
               width: double.infinity,
-              child: Text(
-                'Switch to Light mode',
+              child: Center(
+                child: Text(
+                  'Switch to Light mode',
+                ),
               ),
             ),
           ),
@@ -43,8 +46,10 @@ class HomePage extends StatelessWidget {
             },
             child: const SizedBox(
               width: double.infinity,
-              child: Text(
-                'Switch to Dark mode',
+              child: Center(
+                child: Text(
+                  'Switch to Dark mode',
+                ),
               ),
             ),
           ),
