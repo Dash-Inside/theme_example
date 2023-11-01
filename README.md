@@ -1,3 +1,3 @@
-# theme_example
+# Theme Example
 
-A new Flutter project.
+Basic example of application with Theme changing controller based on Change Notifier pattern
